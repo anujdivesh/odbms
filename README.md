@@ -15,3 +15,5 @@ This is an API documentation of a third party ocean data management system. This
 - Tag
 - Topic
 - Metadata
+
+#### Create users
