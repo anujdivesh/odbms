@@ -56,19 +56,20 @@ Note: JWT expires in 1 hour and Refresh Token expires in 24 hours. Incase access
     "email":"stan@spc.int",
     "designation":"hello"
 }` required `x-access-token`
-- Find contact by pk https://opmdata.gem.spc.int/api/contact/findById 
+- Find contact by id https://opmdata.gem.spc.int/api/contact/findById 
 `{
-    "email":"divesha@spc.int"
+    "id":"1"
 }`
-- Update a contact by pk https://opmdata.gem.spc.int/api/contact/update 
+- Update a contact by id https://opmdata.gem.spc.int/api/contact/update 
 post body `{
+    "id":"1"
     "email":"divesha@spc.int",
     "first_name":"xxxxx"
 }`
 required `x-access-token`
 - Delete contact by email: https://opmdata.gem.spc.int/api/contact/delete 
 `{
-    "email":"divesha@spc.int"
+    "id":"1"
 }`
 required `x-access-token`
 
@@ -314,27 +315,25 @@ required `x-access-token`
 - List All metadata https://opmdata.gem.spc.int/api/metadata
 - Add metadata: https://opmdata.gem.spc.int/api/metadata/add
   post: `{
-    "title":"name of dataset",
-    "desciption": "this is the descriptiosssn",
-    "temportal_coverage_from":"2016-01-02",
-    "temportal_coverage_to": "2016-01-03",
-    "rights":"",
+    "title":"name of dwatsaasss222aswasssete",
+    "description": "this is the desscrsipstiosssn",
+    "temportal_coverage_from":"2025-03-11T00:00:00.000Z",
+    "temportal_coverage_to": "2016-02-20T00:00:00.000Z",
     "language":"en",
     "version":"1.0.0",
     "datatypeid":"1",
-    "datatype_id":"1",
     "spatial_projection_id":"1",
     "license_id":"1",
     "project_id":"TCAP",
     "publisher_id":"SPC",
-    "contact_id":"herved@spc.int",
+    "contact_id":"1",
     "tags":["1"],
     "countries":["TO"],
     "topics":["1"],
     "extents":[{"name":"Minx","value":"179.282882"},{"name":"Miny","value":"-9.282882"}],
     "urls":[{"url":"geoserver-url","path":"179.282882"},{"url":"shared-drive","path":"-9.282882"}]
 }` required `x-access-token`
-- `title` and `countries` needs to be unique in order to add a metadata successfully.
+- `title`, `countries`,`temportal_coverage_from` needs to be unique in order to add a metadata successfully.
 - Delete metadata by ID: https://opmdata.gem.spc.int/api/metadata/delete
 - Find metadata by country https://opmdata.gem.spc.int/api/metadata/findByCountry.
   get `{
@@ -355,16 +354,14 @@ required `x-access-token`
     "description": "this is the desscriptiosssn",
     "temportal_coverage_from":"2016-01-02",
     "temportal_coverage_to": "2016-01-03",
-    "rights":"",
     "language":"en",
     "version":"1.0.0",
     "datatypeid":"1",
-    "datatype_id":"1",
     "spatial_projection_id":"1",
     "license_id":"1",
     "project_id":"TCAP",
     "publisher_id":"SPC",
-    "contact_id":"divesha@spc.int",
+    "contact_id":"1",
     "tags":["1"],
     "countries":["TO"],
     "topics":["1"],
