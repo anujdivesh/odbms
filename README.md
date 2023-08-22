@@ -260,4 +260,111 @@ required `x-access-token`
 }`
 required `x-access-token`
 
+#### Spatial Projection Model
+- List All spatial projection http://localhost:8085/api/spatial_projections
+- Add a spatial projection: http://localhost:8085/api/spatial_projection/add
+  post: `{
+    "name": "EPGS:3939"
+}`
+required `x-access-token`
+- Find spatial projection by id http://localhost:8085/api/spatial_projection/findById
+  `{
+    "id": "2"
+}`
+- update spatial projection by id: http://localhost:8085/api/spatial_projection/update
+  `{
+    "id": "2",
+    "name": "EWssssS"
+}`
+required `x-access-token`
+- Delete spatial projection by id http://localhost:8085/api/spatial_projection/delete
+  `{
+    "id":"2"
+}`
+required `x-access-token`
+
+#### Tag Model
+- List All spatial projection http://localhost:8085/api/tags
+- Add a spatial projection: http://localhost:8085/api/tag/add
+  post: `{
+    "name": "dummy"
+}`
+required `x-access-token`
+- Find spatial projection by id http://localhost:8085/api/tag/findById
+  `{
+    "id": "2"
+}`
+- update spatial projection by id: http://localhost:8085/api/tag/update
+  `{
+    "id": "2",
+    "name": "xxxxx"
+}`
+required `x-access-token`
+- Delete spatial projection by id http://localhost:8085/api/tag/delete
+  `{
+    "id":"2"
+}`
+required `x-access-token`
+
+#### Topic Model
+- List All spatial projection http://localhost:8085/api/topics
+- Add a spatial projection: http://localhost:8085/api/topic/add
+  post: `{
+    "name": "dummy"
+}`
+required `x-access-token`
+- Find spatial projection by id http://localhost:8085/api/topic/findById
+  `{
+    "id": "2"
+}`
+- update spatial projection by id: http://localhost:8085/api/topic/update
+  `{
+    "id": "2",
+    "name": "xxxxx"
+}`
+required `x-access-token`
+- Delete spatial projection by id http://localhost:8085/api/topic/delete
+  `{
+    "id":"2"
+}`
+required `x-access-token`
+
+#### Metadata Model
+- List All metadata http://localhost:8085/api/metadata
+- Add metadata: http://localhost:8085/api/metadata/add
+  post: `{
+    "title":"name of dataset",
+    "desciption": "this is the descriptiosssn",
+    "temportal_coverage_from":"2016-01-02",
+    "temportal_coverage_to": "2016-01-03",
+    "rights":"",
+    "language":"en",
+    "version":"1.0.0",
+    "datatypeid":"1",
+    "datatype_id":"1",
+    "spatial_projection_id":"1",
+    "license_id":"1",
+    "project_id":"TCAP",
+    "publisher_id":"SPC",
+    "contact_id":"herved@spc.int",
+    "tags":["1"],
+    "countries":["TO"],
+    "topics":["1"],
+    "extents":[{"name":"Minx","value":"179.282882"},{"name":"Miny","value":"-9.282882"}],
+    "urls":[{"url":"geoserver-url","path":"179.282882"},{"url":"shared-drive","path":"-9.282882"}]
+}`
+- title and country needs to be unique in order to add a metadata successfully.
+- Delete metadata by ID: http://localhost:8085/api/metadata/delete
+- Find metadata by country http://localhost:8085/api/metadata/findByCountry.
+  get `{
+    "country":["TO"]
+}`
+- Find metadata by project http://localhost:8085/api/metadata/findByProject
+  get `{
+    "project_code":["TCAP"]
+}`
+- Find metadata by data type http://localhost:8085/api/metadata/findByDataType
+  get `{
+    "data_type":["Raster"]
+}`
 
