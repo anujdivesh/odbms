@@ -17,7 +17,7 @@ This is an API documentation of a third party ocean data management system. This
 - Metadata
 
 #### Members Model
-- It is a secret to create a user with administrator previledges. A default adminuser has been created to be used for testing purposes `username: admin` `password: S1mpl3x`
+- It is a secret to create a user with administrator previledges. A default admin user has been created to be used for testing purposes `username: admin` `password: S1mpl3x`
 - To create a normal user
 post`
   {
