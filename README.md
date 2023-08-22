@@ -17,7 +17,7 @@ This is an API documentation of a third party ocean data management system. This
 - Metadata
 
 #### Create Registered Members
-To create a user http://localhost:8085/api/auth/signup 
+- To create a user http://localhost:8085/api/auth/signup 
 `  {
     "first_name": "divesh",
     "last_name":"anuj",
@@ -28,8 +28,7 @@ To create a user http://localhost:8085/api/auth/signup
     "organization_id":"SPC",
     "country_id":"FJ"
 }`
-
-To create a normal user
+- To create a normal user
 `
   {
     "first_name": "divesh",
@@ -41,21 +40,17 @@ To create a normal user
     "organization_id":"SPC",
     "country_id":"FJ"
 }`
-
-To Sign in http://localhost:8085/api/auth/signin post
+- To Sign in http://localhost:8085/api/auth/signin post
 `{
     "username":"admin",
     "password":"admin"
 }`
-
-To refresh the token http://localhost:8085/api/auth/refreshtoken 
+- To refresh the token http://localhost:8085/api/auth/refreshtoken 
 `{
     "refreshToken":"2e4a44e0-0f34-4c89-9d41-f9908c9f6f7f"
 }`
-
-To access protected pages, pass `x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjkyNjU4NTczLCJleHAiOjE2OTI2NTg2MzN9.9M1sd0PmQKhp4pOlvjF9S9lK-9e2dc91ktQhMiwm4Vo`
-
-To reset password: http://localhost:8085/api/auth/forgotPassword 
+- To access protected pages, pass `x-access-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNjkyNjU4NTczLCJleHAiOjE2OTI2NTg2MzN9.9M1sd0PmQKhp4pOlvjF9S9lK-9e2dc91ktQhMiwm4Vo`
+- To reset password: http://localhost:8085/api/auth/forgotPassword 
 `{
     "email":"divesha3@spc.int"
 }`
@@ -63,29 +58,25 @@ To reset password: http://localhost:8085/api/auth/forgotPassword
 Note: JWT expires in 1 hour and Refresh Token expires in 24 hours. Incase access token has been expired, post refresh token to get a new access token
 
 #### Contact Model
-List all contacts: http://localhost:8085/api/contacts
-
-Add contacts: http://localhost:8085/api/contact/add 
-post `{
+- List all contacts: http://localhost:8085/api/contacts
+- Add contacts: http://localhost:8085/api/contact/add
+  post `{
     "first_name":"FJX",
     "last_name":"New",
     "email":"zulfi@spc.int",
     "designation":"hello"
 }` required `x-access-token`
-
-Find contact by pk http://localhost:8085/api/contact/findById 
+- Find contact by pk http://localhost:8085/api/contact/findById 
 `{
     "email":"divesha@spc.int"
 }`
-
-Update a contact by pk http://localhost:8085/api/contact/update 
+- Update a contact by pk http://localhost:8085/api/contact/update 
 post body `{
     "email":"divesha@spc.int",
     "first_name":"xxxxx"
 }`
 required `x-access-token`
-
-Delete contact by email: http://localhost:8085/api/contact/delete 
+- Delete contact by email: http://localhost:8085/api/contact/delete 
 `{
     "email":"divesha@spc.int"
 }`
@@ -366,5 +357,28 @@ required `x-access-token`
 - Find metadata by data type http://localhost:8085/api/metadata/findByDataType
   get `{
     "data_type":["Raster"]
+}`
+- update metadata by id http://localhost:8085/api/metadata/update
+  post`{
+    "id":"2",
+    "title":"name of datswasete",
+    "description": "this is the desscriptiosssn",
+    "temportal_coverage_from":"2016-01-02",
+    "temportal_coverage_to": "2016-01-03",
+    "rights":"",
+    "language":"en",
+    "version":"1.0.0",
+    "datatypeid":"1",
+    "datatype_id":"1",
+    "spatial_projection_id":"1",
+    "license_id":"1",
+    "project_id":"TCAP",
+    "publisher_id":"SPC",
+    "contact_id":"divesha@spc.int",
+    "tags":["1"],
+    "countries":["TO"],
+    "topics":["1"],
+    "extents":[{"name":"Minx","value":"179.282882"},{"name":"Minz","value":"-9.282882"}],
+    "urls":[{"url":"geoserver-url","path":"179.282882"},{"url":"shared-drive","path":"-9.282882"}]
 }`
 
