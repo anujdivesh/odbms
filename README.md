@@ -333,8 +333,8 @@ required `x-access-token`
     "topics":["1"],
     "extents":[{"name":"Minx","value":"179.282882"},{"name":"Miny","value":"-9.282882"}],
     "urls":[{"url":"geoserver-url","path":"179.282882"},{"url":"shared-drive","path":"-9.282882"}]
-}`
-- Title and Country_code needs to be unique in order to add a metadata successfully.
+}` required `x-access-token`
+- `title` and `countries` needs to be unique in order to add a metadata successfully.
 - Delete metadata by ID: https://opmdata.gem.spc.int/api/metadata/delete
 - Find metadata by country https://opmdata.gem.spc.int/api/metadata/findByCountry.
   get `{
@@ -371,4 +371,4 @@ required `x-access-token`
     "extents":[{"name":"Minx","value":"179.282882"},{"name":"Minz","value":"-9.282882"}],
     "urls":[{"url":"geoserver-url","path":"179.282882"},{"url":"shared-drive","path":"-9.282882"}]
 }`
-
+required `x-access-token`
