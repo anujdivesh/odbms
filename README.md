@@ -53,7 +53,7 @@ Note: JWT expires in 1 hour and Refresh Token expires in 24 hours. Incase access
   post `{
     "first_name":"FJX",
     "last_name":"New",
-    "email":"zulfi@spc.int",
+    "email":"stan@spc.int",
     "designation":"hello"
 }` required `x-access-token`
 - Find contact by pk https://opmdata.gem.spc.int/api/contact/findById 
