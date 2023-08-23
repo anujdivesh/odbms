@@ -222,7 +222,7 @@ required `x-access-token`
   post: `{
     "short_name": "ECIKS",
     "name": "Tuvalu Coastal Adaptation Project",
-    "country_id": "TO"
+    "country_id": ["TO","FJ"]
 }`
 required `x-access-token`
 - Find project by name https://opmdata.gem.spc.int/api/project/findById
